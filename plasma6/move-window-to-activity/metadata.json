@@ -1,0 +1,21 @@
+{
+    "KPackageStructure": "KWin/Script",
+    "KPlugin": {
+        "Name": "Move Window to Named Activity",
+        "Description": "Creates shortcuts to move windows to specific activities",
+        "Icon": "preferences-system-windows",
+        "Authors": [
+            {
+                "Name": "Harold Drost",
+                "WebAddress": "https://github.com/baelish",
+                "AvatarUrl": "https://www.gravatar.com/avatar/9001502126dc8b48188b0d4fc2b7d961d47d7b2c2ef8d1bbd9c575526ca9042f"
+            }
+        ],
+        "Id": "move-window-to-activity",
+        "Version": "1.0",
+        "License": "GPLv3",
+        "WebSite": "https://github.com/baelish/kde-scripts"
+    },
+    "X-Plasma-API": "javascript",
+    "X-Plasma-MainScript": "code/main.js"
+}

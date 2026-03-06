@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+IFS=$'\n\t'
+
+SCRIPT_ID="move-window-to-activity"
+scriptDir=$(dirname "$0")
+
+qdbus6 org.kde.KWin /Scripting unloadScript "$SCRIPT_ID"
+kpackagetool6 --type KWin/Script -u "$scriptDir" || kpackagetool6 --type KWin/Script -i "$scriptDir"
+qdbus6 org.kde.KWin /KWin reconfigure
+qdbus6 org.kde.KWin /Scripting start
+
+
+cat <<EOF 
+
+Done, though you may still need to disable the script, apply then
+re-enable and apply before shortcuts are showing/updated.
+
+EOF
